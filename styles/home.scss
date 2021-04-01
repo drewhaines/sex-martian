@@ -1,0 +1,34 @@
+$size: 180px;
+
+body {
+  margin: 0;
+  background-color: white;
+}
+
+.x {
+  animation: x 13s linear infinite alternate;
+  width: $size;
+  height: $size;
+
+  div {
+    overflow: visible !important;
+  }
+}
+
+.y {
+  animation: y 7s linear infinite alternate;
+  width: $size;
+  height: $size;
+}
+
+@keyframes x {
+  100% {
+    transform: translateX(calc(100vw - #{$size}));
+  }
+}
+
+@keyframes y {
+  100% {
+    transform: translateY(calc(100vh - #{$size}));
+  }
+}
