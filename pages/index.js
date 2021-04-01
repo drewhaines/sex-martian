@@ -388,7 +388,7 @@ export default function Home() {
       >
         <Heading
           sx={{
-            mb: 10,
+            mb: [5, 10],
             pt: 10,
             color: "black",
             textAlign: "center",
@@ -507,14 +507,12 @@ export default function Home() {
             px: 3,
             textAlign: "center",
             mx: "auto",
-            columnCount: 3,
+            columnCount: [1, 3],
             columnGap: "15px",
             "& > *": {
               display: "inline-block",
               verticalAlign: "top",
               maxWidth: ["100%", "100%"],
-              mr: 1,
-              ml: 1,
               mb: 2
             }
           }}
@@ -529,6 +527,7 @@ export default function Home() {
         </Box>
         <Heading
           sx={{
+            px: 3,
             pb: 5,
             pt: [5, 15],
             mx: "auto",
