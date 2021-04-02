@@ -216,8 +216,8 @@ export default function Home() {
             <Heading
               variant="h1"
               sx={{
-                mt: [8, 10],
-                mb: [5, 10],
+                mt: [8, 8],
+                mb: [5, 5],
                 color: "white",
                 textAlign: "center",
                 fontFamily: "Nanum Pen Script, Comic Sans MS"
@@ -226,141 +226,128 @@ export default function Home() {
               Tour Dates
             </Heading>
             <Grid
-              columns={"1fr 1fr"}
+              columns={"auto 1fr"}
               sx={{
                 gridColumnGap: [0, 20],
-                gridRowGap: [1, 3],
-                px: 3
+                gridRowGap: [1, 2]
               }}
             >
               <Heading
                 sx={{
-                  mb: 5,
                   color: "white",
                   textAlign: "left",
                   fontFamily: "Nanum Pen Script, Comic Sans MS",
-                  fontSize: [3, 6]
+                  fontSize: [4, 5]
                 }}
               >
                 Mars
               </Heading>
               <Heading
                 sx={{
-                  mb: 5,
                   color: "white",
                   textAlign: "right",
                   fontFamily: "Nanum Pen Script, Comic Sans MS",
-                  fontSize: [3, 6]
+                  fontSize: [4, 5]
                 }}
               >
                 4-20-2021
               </Heading>
               <Heading
                 sx={{
-                  mb: 5,
                   color: "white",
                   textAlign: "left",
                   fontFamily: "Nanum Pen Script, Comic Sans MS",
-                  fontSize: [3, 6]
+                  fontSize: [4, 5]
                 }}
               >
                 San Diego
               </Heading>
               <Heading
                 sx={{
-                  mb: 5,
                   color: "white",
                   textAlign: "right",
                   fontFamily: "Nanum Pen Script, Comic Sans MS",
-                  fontSize: [3, 6]
+                  fontSize: [4, 5]
                 }}
               >
                 5-b^2-2021
               </Heading>
               <Heading
                 sx={{
-                  mb: 5,
                   color: "white",
                   textAlign: "left",
                   fontFamily: "Nanum Pen Script, Comic Sans MS",
-                  fontSize: [3, 6]
+                  fontSize: [4, 5]
                 }}
               >
                 LA
               </Heading>
               <Heading
                 sx={{
-                  mb: 5,
                   color: "white",
                   textAlign: "right",
                   fontFamily: "Nanum Pen Script, Comic Sans MS",
-                  fontSize: [3, 6]
+                  fontSize: [4, 5]
                 }}
               >
                 Next blue moon
               </Heading>
               <Heading
                 sx={{
-                  mb: 5,
                   color: "white",
                   textAlign: "left",
                   fontFamily: "Nanum Pen Script, Comic Sans MS",
-                  fontSize: [3, 6]
+                  fontSize: [4, 5]
                 }}
               >
                 Uranus
               </Heading>
               <Heading
                 sx={{
-                  mb: 5,
                   color: "white",
                   textAlign: "right",
                   fontFamily: "Nanum Pen Script, Comic Sans MS",
-                  fontSize: [3, 6]
+                  fontSize: [4, 5]
                 }}
               >
                 Never
               </Heading>
               <Heading
                 sx={{
-                  mb: 5,
                   color: "white",
                   textAlign: "left",
                   fontFamily: "Nanum Pen Script, Comic Sans MS",
-                  fontSize: [3, 6]
+                  fontSize: [4, 5]
                 }}
               >
                 Seattle
               </Heading>
               <Heading
                 sx={{
-                  mb: 5,
                   color: "white",
                   textAlign: "right",
                   fontFamily: "Nanum Pen Script, Comic Sans MS",
-                  fontSize: [3, 6]
+                  fontSize: [4, 5]
                 }}
               >
                 6-10-2021
               </Heading>
               <Heading
                 sx={{
-                  mb: 5,
                   color: "white",
                   textAlign: "left",
                   fontFamily: "Nanum Pen Script, Comic Sans MS",
-                  fontSize: [3, 6]
+                  fontSize: [4, 5]
                 }}
               >
                 Your City
               </Heading>
               <Heading
                 sx={{
-                  mb: 5,
                   color: "white",
                   textAlign: "right",
                   fontFamily: "Nanum Pen Script, Comic Sans MS",
-                  fontSize: [3, 6]
+                  fontSize: [4, 5]
                 }}
               >
                 One day ...
@@ -369,14 +356,14 @@ export default function Home() {
           </Grid>
           <Heading
             sx={{
-              mt: [6, 20],
+              mt: [10, 10],
               mb: 5,
               px: 3,
               color: "white",
               textAlign: "center",
               fontFamily: "Nanum Pen Script, Comic Sans MS",
               whiteSpace: "pre-wrap",
-              fontSize: [3, 6]
+              fontSize: [4, 5]
             }}
           >
             {
@@ -400,7 +387,7 @@ export default function Home() {
             color: "black",
             textAlign: "center",
             fontFamily: "Nanum Pen Script, Comic Sans MS",
-            fontSize: [4, 6]
+            fontSize: ["38px", 6]
           }}
         >
           Who the heck are you?
@@ -504,7 +491,7 @@ export default function Home() {
             color: "black",
             textAlign: "center",
             fontFamily: "Nanum Pen Script, Comic Sans MS",
-            fontSize: [4, 6]
+            fontSize: ["38px", 6]
           }}
         >
           Latest
