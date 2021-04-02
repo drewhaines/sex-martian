@@ -2,8 +2,46 @@ import Head from "next/head";
 import Image from "next/image";
 import { jsx, Box, Container, Heading, Grid, Text } from "theme-ui";
 import { Tweet } from "react-static-tweets";
+import Twitter from "twitter-lite";
 
-export default function Home() {
+export const getStaticProps = async () => {
+  try {
+    const client = new Twitter({
+      consumer_key: process.env.TWITTER_CONSUMER_KEY,
+      consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+      access_token_key: process.env.TWITTER_ACCESS_TOKEN,
+      access_token_secret: process.env.TWITTER_TOKEN_SECRET
+    });
+
+    const tweets = await client.get("statuses/user_timeline", {
+      screen_name: "sexmartianmusic",
+      count: 10
+    });
+
+    const tweetIds = tweets.map((tweet) => tweet.id_str);
+
+    return {
+      props: {
+        tweets: tweetIds
+      },
+      revalidate: 10
+    };
+  } catch (err) {
+    console.error("error fetching tweet info", err);
+  }
+};
+
+export default function Home({ tweets }) {
+  const tweetIds = tweets || [
+    "1377685969420218371",
+    "1377685969420218371",
+    "1376947328616128514",
+    "1376584941228597252",
+    "1372236286451449857",
+    "1375860165069578240",
+    "1375497777350852613"
+  ];
+
   return (
     <div>
       <Head>
@@ -511,13 +549,9 @@ export default function Home() {
             }
           }}
         >
-          <Tweet id="1377685969420218371" />
-          <Tweet id="1376947328616128514" />
-          <Tweet id="1376584941228597252" />
-          <Tweet id="1372236286451449857" />
-          <Tweet id="1375860165069578240" />
-
-          <Tweet id="1375497777350852613" />
+          {tweetIds.map((tweetId) => (
+            <Tweet key={tweetId} id={tweetId} />
+          ))}
         </Box>
         <Heading
           sx={{
@@ -533,7 +567,7 @@ export default function Home() {
             whiteSpace: "pre-wrap"
           }}
         >
-          {`Sex Martian ${new Date().getFullYear()}\n\nAll rights are reserved by me, myself, and the guy who made this website.`}
+          {`Sex Martian ${new Date().getFullYear()}\n\nContact: sexmartianmusic@gmail.com\n\nAll rights are reserved by me, myself, and the guy who made this website.`}
         </Heading>
       </Box>
     </div>
