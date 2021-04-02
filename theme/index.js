@@ -7,9 +7,9 @@ export default {
   },
   fonts: {
     body:
-      '"Lato", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+      '"Nanum Pen Script", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
     heading:
-      '"Lato", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
+      '"Nanum Pen Script", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif',
     monospace: "Menlo, monospace",
     cursive: ""
   },
@@ -22,7 +22,7 @@ export default {
     body: 1.5,
     heading: 1.125
   },
-  fontSizes: [12, 14, 16, 20, 26, 32, 48, 64, 72],
+  fontSizes: [14, 16, 20, 26, 32, 48, 64, 72],
   space: [
     0,
     5,

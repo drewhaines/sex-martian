@@ -18,8 +18,8 @@ export default function Home() {
         <meta name="msapplication-TileColor" content="#603cba" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
 
-        <meta name="title" content="Cowboys, by Sex Martian" />
-        <meta property="og:title" content="Cowboys, by Sex Martian" />
+        <meta name="title" content="Sex Martian" />
+        <meta property="og:title" content="Sex Martian" />
         <meta property="og:type" content="song" />
         <meta property="og:site_name" content="Sex Martian" />
         <meta property="og:description" content=" from the album Greetings " />
@@ -58,7 +58,7 @@ export default function Home() {
               ]
             }}
           >
-            <Grid mt={[0, 8]} sx={{ gridArea: "intro" }}>
+            <Grid mt={[0, 0]} sx={{ gridArea: "intro" }}>
               <Box>
                 <Heading
                   variant="h2"
@@ -86,7 +86,11 @@ export default function Home() {
               <Heading
                 variant="h1"
                 mb={1}
-                sx={{ textAlign: "center", fontFamily: "Comic Sans MS" }}
+                sx={{
+                  fontSize: "50px",
+                  textAlign: "center",
+                  fontFamily: "Nanum Pen Script, Comic Sans MS"
+                }}
               >
                 Greetings
               </Heading>
@@ -96,7 +100,10 @@ export default function Home() {
               <Heading
                 variant="h1"
                 mb={10}
-                sx={{ textAlign: "center", fontFamily: "Comic Sans MS" }}
+                sx={{
+                  textAlign: "center",
+                  fontFamily: "Nanum Pen Script, Comic Sans MS"
+                }}
               >
                 Sex Martian
               </Heading>
@@ -213,7 +220,7 @@ export default function Home() {
                 mb: [5, 10],
                 color: "white",
                 textAlign: "center",
-                fontFamily: "Comic Sans MS"
+                fontFamily: "Nanum Pen Script, Comic Sans MS"
               }}
             >
               Tour Dates
@@ -222,7 +229,7 @@ export default function Home() {
               columns={"1fr 1fr"}
               sx={{
                 gridColumnGap: [0, 20],
-                gridRowGap: [2, 5],
+                gridRowGap: [1, 3],
                 px: 3
               }}
             >
@@ -231,7 +238,7 @@ export default function Home() {
                   mb: 5,
                   color: "white",
                   textAlign: "left",
-                  fontFamily: "Comic Sans MS",
+                  fontFamily: "Nanum Pen Script, Comic Sans MS",
                   fontSize: [3, 6]
                 }}
               >
@@ -242,7 +249,7 @@ export default function Home() {
                   mb: 5,
                   color: "white",
                   textAlign: "right",
-                  fontFamily: "Comic Sans MS",
+                  fontFamily: "Nanum Pen Script, Comic Sans MS",
                   fontSize: [3, 6]
                 }}
               >
@@ -253,7 +260,7 @@ export default function Home() {
                   mb: 5,
                   color: "white",
                   textAlign: "left",
-                  fontFamily: "Comic Sans MS",
+                  fontFamily: "Nanum Pen Script, Comic Sans MS",
                   fontSize: [3, 6]
                 }}
               >
@@ -264,7 +271,7 @@ export default function Home() {
                   mb: 5,
                   color: "white",
                   textAlign: "right",
-                  fontFamily: "Comic Sans MS",
+                  fontFamily: "Nanum Pen Script, Comic Sans MS",
                   fontSize: [3, 6]
                 }}
               >
@@ -275,7 +282,7 @@ export default function Home() {
                   mb: 5,
                   color: "white",
                   textAlign: "left",
-                  fontFamily: "Comic Sans MS",
+                  fontFamily: "Nanum Pen Script, Comic Sans MS",
                   fontSize: [3, 6]
                 }}
               >
@@ -286,7 +293,7 @@ export default function Home() {
                   mb: 5,
                   color: "white",
                   textAlign: "right",
-                  fontFamily: "Comic Sans MS",
+                  fontFamily: "Nanum Pen Script, Comic Sans MS",
                   fontSize: [3, 6]
                 }}
               >
@@ -297,7 +304,7 @@ export default function Home() {
                   mb: 5,
                   color: "white",
                   textAlign: "left",
-                  fontFamily: "Comic Sans MS",
+                  fontFamily: "Nanum Pen Script, Comic Sans MS",
                   fontSize: [3, 6]
                 }}
               >
@@ -308,7 +315,7 @@ export default function Home() {
                   mb: 5,
                   color: "white",
                   textAlign: "right",
-                  fontFamily: "Comic Sans MS",
+                  fontFamily: "Nanum Pen Script, Comic Sans MS",
                   fontSize: [3, 6]
                 }}
               >
@@ -319,7 +326,7 @@ export default function Home() {
                   mb: 5,
                   color: "white",
                   textAlign: "left",
-                  fontFamily: "Comic Sans MS",
+                  fontFamily: "Nanum Pen Script, Comic Sans MS",
                   fontSize: [3, 6]
                 }}
               >
@@ -330,7 +337,7 @@ export default function Home() {
                   mb: 5,
                   color: "white",
                   textAlign: "right",
-                  fontFamily: "Comic Sans MS",
+                  fontFamily: "Nanum Pen Script, Comic Sans MS",
                   fontSize: [3, 6]
                 }}
               >
@@ -341,7 +348,7 @@ export default function Home() {
                   mb: 5,
                   color: "white",
                   textAlign: "left",
-                  fontFamily: "Comic Sans MS",
+                  fontFamily: "Nanum Pen Script, Comic Sans MS",
                   fontSize: [3, 6]
                 }}
               >
@@ -352,7 +359,7 @@ export default function Home() {
                   mb: 5,
                   color: "white",
                   textAlign: "right",
-                  fontFamily: "Comic Sans MS",
+                  fontFamily: "Nanum Pen Script, Comic Sans MS",
                   fontSize: [3, 6]
                 }}
               >
@@ -367,13 +374,13 @@ export default function Home() {
               px: 3,
               color: "white",
               textAlign: "center",
-              fontFamily: "Comic Sans MS",
+              fontFamily: "Nanum Pen Script, Comic Sans MS",
               whiteSpace: "pre-wrap",
               fontSize: [3, 6]
             }}
           >
             {
-              "Obviously touring is on pause due to COVID. \n\nCheck back for updates."
+              "Obviously touring is on pause due to COVID. \nCheck back for updates."
             }
           </Heading>
         </Box>
@@ -392,7 +399,7 @@ export default function Home() {
             pt: 10,
             color: "black",
             textAlign: "center",
-            fontFamily: "Comic Sans MS",
+            fontFamily: "Nanum Pen Script, Comic Sans MS",
             fontSize: [4, 6]
           }}
         >
@@ -404,7 +411,7 @@ export default function Home() {
             pt: 5,
             color: "black",
             textAlign: "center",
-            fontFamily: "Comic Sans MS",
+            fontFamily: "Nanum Pen Script, Comic Sans MS",
             fontSize: [3, 5],
             whiteSpace: "pre-wrap"
           }}
@@ -427,7 +434,7 @@ export default function Home() {
               pt: [10, 20],
               color: "black",
               textAlign: "center",
-              fontFamily: "Comic Sans MS",
+              fontFamily: "Nanum Pen Script, Comic Sans MS",
               fontSize: [3, 5],
               maxWidth: "800px"
             }}
@@ -451,11 +458,11 @@ export default function Home() {
             mb: [0, 5],
             color: "black",
             textAlign: "center",
-            fontFamily: "Comic Sans MS",
+            fontFamily: "Nanum Pen Script, Comic Sans MS",
             fontSize: [3, 5]
           }}
         >
-          I like to party, make music, and get weird.
+          I like to make music and get weird.
         </Heading>
         <Grid variant="centered">
           <iframe
@@ -474,7 +481,7 @@ export default function Home() {
               pt: [5, 20],
               color: "black",
               textAlign: "center",
-              fontFamily: "Comic Sans MS",
+              fontFamily: "Nanum Pen Script, Comic Sans MS",
               fontSize: [3, 5],
               maxWidth: "800px",
               whiteSpace: "pre-wrap"
@@ -496,7 +503,7 @@ export default function Home() {
             pt: 10,
             color: "black",
             textAlign: "center",
-            fontFamily: "Comic Sans MS",
+            fontFamily: "Nanum Pen Script, Comic Sans MS",
             fontSize: [4, 6]
           }}
         >
@@ -533,7 +540,7 @@ export default function Home() {
             mx: "auto",
             color: "black",
             textAlign: "center",
-            fontFamily: "Comic Sans MS",
+            fontFamily: "Nanum Pen Script, Comic Sans MS",
             fontSize: [3, 2],
             maxWidth: "800px",
             whiteSpace: "pre-wrap"
