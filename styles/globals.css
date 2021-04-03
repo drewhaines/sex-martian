@@ -20,3 +20,22 @@ a {
 iframe {
   max-width: 100%;
 }
+
+.imageRotateHorizontal {
+  -moz-animation: spinHorizontal 2s infinite linear;
+  -o-animation: spinHorizontal 2s infinite linear;
+  -webkit-animation: spinHorizontal 2s infinite linear;
+  animation: spinHorizontal 2s infinite linear;
+}
+
+@keyframes spinHorizontal {
+  0% {
+    transform: rotateY(0deg);
+  }
+  80% {
+    transform: rotateY(0deg);
+  }
+  81% {
+    transform: rotateY(-360deg);
+  }
+}

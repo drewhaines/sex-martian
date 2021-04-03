@@ -517,7 +517,7 @@ export default function Home({ tweets }) {
             }
           </Heading>
           <Box sx={{ maxWidth: 500 }}>
-            <img src="/craig.png" alt="greetings album cover" width={"100%"} />
+            <img src="/craig.png" alt="greetings album cover" width={"100%"} className="imageRotateHorizontal" />
           </Box>
         </Grid>
       </Box>
