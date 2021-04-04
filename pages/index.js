@@ -3,44 +3,83 @@ import Image from "next/image";
 import { jsx, Box, Container, Heading, Grid, Text } from "theme-ui";
 import { Tweet } from "react-static-tweets";
 import Twitter from "twitter-lite";
+import Instagram from "instagram-web-api";
+import InstagramEmbed from "react-instagram-embed";
 
 export const getStaticProps = async () => {
+  // try {
+  //   const client = new Twitter({
+  //     consumer_key: process.env.TWITTER_CONSUMER_KEY,
+  //     consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
+  //     access_token_key: process.env.TWITTER_ACCESS_TOKEN,
+  //     access_token_secret: process.env.TWITTER_TOKEN_SECRET
+  //   });
+
+  //   const tweets = await client.get("statuses/user_timeline", {
+  //     screen_name: "sexmartianmusic",
+  //     count: 10
+  //   });
+
+  //   const tweetIds = tweets.map((tweet) => tweet.id_str);
+
+  //   return {
+  //     props: {
+  //       tweets: tweetIds
+  //     },
+  //     revalidate: 10
+  //   };
+  // } catch (err) {
+  //   console.error("error fetching tweet info", err);
+  // }
+
+  const client = new Instagram({
+    username: process.env.IG_USERNAME,
+    password: process.env.IG_PASSWORD
+  });
+
+  let posts = [];
   try {
-    const client = new Twitter({
-      consumer_key: process.env.TWITTER_CONSUMER_KEY,
-      consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-      access_token_key: process.env.TWITTER_ACCESS_TOKEN,
-      access_token_secret: process.env.TWITTER_TOKEN_SECRET
+    await client.login();
+
+    // request photos for a specific instagram user
+    const instagram = await client.getPhotosByUsername({
+      username: process.env.IG_USERNAME
     });
 
-    const tweets = await client.get("statuses/user_timeline", {
-      screen_name: "sexmartianmusic",
-      count: 10
-    });
-
-    const tweetIds = tweets.map((tweet) => tweet.id_str);
-
-    return {
-      props: {
-        tweets: tweetIds
-      },
-      revalidate: 10
-    };
+    if (instagram["user"]["edge_owner_to_timeline_media"]["count"] > 0) {
+      // if we receive timeline data back
+      //  update the posts to be equal
+      // to the edges that were returned from the instagram API response
+      posts = instagram["user"]["edge_owner_to_timeline_media"]["edges"];
+    }
   } catch (err) {
-    console.error("error fetching tweet info", err);
+    console.log(
+      "Something went wrong while fetching content from Instagram",
+      err
+    );
   }
+
+  return {
+    props: {
+      instagramPosts: posts.slice(0, 8) // returns either [] or the edges returned from the Instagram API based on the response from the `getPhotosByUsername` API call
+    }
+  };
 };
 
-export default function Home({ tweets }) {
-  const tweetIds = tweets || [
-    "1377685969420218371",
-    "1377685969420218371",
-    "1376947328616128514",
-    "1376584941228597252",
-    "1372236286451449857",
-    "1375860165069578240",
-    "1375497777350852613"
-  ];
+export default function Home({ tweets, instagramPosts }) {
+  // const tweetIds = tweets || [
+  //   "1377685969420218371",
+  //   "1377685969420218371",
+  //   "1376947328616128514",
+  //   "1376584941228597252",
+  //   "1372236286451449857",
+  //   "1375860165069578240",
+  //   "1375497777350852613"
+  // ];
+
+  const postUrls = instagramPosts.map(
+    (post) => `https://instagr.am/p/${post.node.shortcode}`
+  );
 
   return (
     <div>
@@ -517,7 +556,12 @@ export default function Home({ tweets }) {
             }
           </Heading>
           <Box sx={{ maxWidth: 500 }}>
-            <img src="/craig.png" alt="greetings album cover" width={"100%"} className="imageRotateHorizontal" />
+            <img
+              src="/craig.png"
+              alt="greetings album cover"
+              width={"100%"}
+              className="imageRotateHorizontal"
+            />
           </Box>
         </Grid>
       </Box>
@@ -541,17 +585,35 @@ export default function Home({ tweets }) {
             mx: "auto",
             columnCount: [1, 3],
             columnGap: "15px",
+            maxWidth: "1200px",
             "& > *": {
               display: "inline-block",
               verticalAlign: "top",
               maxWidth: ["100%", "100%"],
+              width: "100%",
               mb: 2
             }
           }}
         >
-          {tweetIds.map((tweetId) => (
-            <Tweet key={tweetId} id={tweetId} />
+          {postUrls.map((post) => (
+            <InstagramEmbed
+              key={post}
+              url={post}
+              clientAccessToken="539045670411817|263a2a42edcd2e937d245ad56ed3521d"
+              maxWidth={800}
+              hideCaption={false}
+              containerTagName="div"
+              protocol=""
+              injectScript
+              onLoading={() => {}}
+              onSuccess={() => {}}
+              onAfterRender={() => {}}
+              onFailure={() => {}}
+            />
           ))}
+          {/* {tweetIds.map((tweetId) => (
+            <Tweet key={tweetId} id={tweetId} />
+          ))} */}
         </Box>
         <Heading
           sx={{
