@@ -38,6 +38,7 @@ export const getStaticProps = async () => {
   });
 
   let posts = [];
+
   try {
     await client.login();
 
