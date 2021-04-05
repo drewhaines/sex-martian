@@ -556,7 +556,7 @@ export default function Home({ instagramPosts }) {
             <InstagramEmbed
               key={post}
               url={post}
-              clientAccessToken="539045670411817|263a2a42edcd2e937d245ad56ed3521d"
+              clientAccessToken={process.env.INSTAGRAM_ACCESS_TOKEN}
               maxWidth={800}
               hideCaption={false}
               containerTagName="div"
