@@ -1,8 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import { jsx, Box, Container, Heading, Grid, Text } from "theme-ui";
-import { Tweet } from "react-static-tweets";
-import Twitter from "twitter-lite";
 import InstagramEmbed from "react-instagram-embed";
 
 const IG_URL =
@@ -556,7 +554,7 @@ export default function Home({ instagramPosts }) {
             <InstagramEmbed
               key={post}
               url={post}
-              clientAccessToken={process.env.INSTAGRAM_ACCESS_TOKEN}
+              clientAccessToken={process.env.NEXT_PUBLIC_INSTAGRAM_ACCESS_TOKEN}
               maxWidth={800}
               hideCaption={false}
               containerTagName="div"
