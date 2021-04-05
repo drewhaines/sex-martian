@@ -3,55 +3,21 @@ import Image from "next/image";
 import { jsx, Box, Container, Heading, Grid, Text } from "theme-ui";
 import { Tweet } from "react-static-tweets";
 import Twitter from "twitter-lite";
-import Instagram from "instagram-web-api";
 import InstagramEmbed from "react-instagram-embed";
 
+const IG_URL =
+  "https://www.instagram.com/graphql/query/?query_id=17888483320059182&variables=%7B%22id%22:%2223130744057%22,%22first%22:9,%22after%22:null%7D";
+
 export const getStaticProps = async () => {
-  // try {
-  //   const client = new Twitter({
-  //     consumer_key: process.env.TWITTER_CONSUMER_KEY,
-  //     consumer_secret: process.env.TWITTER_CONSUMER_SECRET,
-  //     access_token_key: process.env.TWITTER_ACCESS_TOKEN,
-  //     access_token_secret: process.env.TWITTER_TOKEN_SECRET
-  //   });
-
-  //   const tweets = await client.get("statuses/user_timeline", {
-  //     screen_name: "sexmartianmusic",
-  //     count: 10
-  //   });
-
-  //   const tweetIds = tweets.map((tweet) => tweet.id_str);
-
-  //   return {
-  //     props: {
-  //       tweets: tweetIds
-  //     },
-  //     revalidate: 10
-  //   };
-  // } catch (err) {
-  //   console.error("error fetching tweet info", err);
-  // }
-
-  const client = new Instagram({
-    username: process.env.IG_USERNAME,
-    password: process.env.IG_PASSWORD
-  });
-
-  let posts = [];
+  let instagramPosts = [];
 
   try {
-    await client.login();
+    let response = await fetch(IG_URL);
+    const responseJson = response ? await response.json() : {};
+    const instagram = responseJson.data;
 
-    // request photos for a specific instagram user
-    const instagram = await client.getPhotosByUsername({
-      username: process.env.IG_USERNAME
-    });
-
-    if (instagram["user"]["edge_owner_to_timeline_media"]["count"] > 0) {
-      // if we receive timeline data back
-      //  update the posts to be equal
-      // to the edges that were returned from the instagram API response
-      posts = instagram["user"]["edge_owner_to_timeline_media"]["edges"];
+    if (instagram.user.edge_owner_to_timeline_media.count > 0) {
+      instagramPosts = instagram.user.edge_owner_to_timeline_media.edges;
     }
   } catch (err) {
     console.log(
@@ -62,23 +28,13 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      instagramPosts: posts.slice(0, 8) // returns either [] or the edges returned from the Instagram API based on the response from the `getPhotosByUsername` API call
+      instagramPosts
     }
   };
 };
 
-export default function Home({ tweets, instagramPosts }) {
-  // const tweetIds = tweets || [
-  //   "1377685969420218371",
-  //   "1377685969420218371",
-  //   "1376947328616128514",
-  //   "1376584941228597252",
-  //   "1372236286451449857",
-  //   "1375860165069578240",
-  //   "1375497777350852613"
-  // ];
-
-  const postUrls = instagramPosts.map(
+export default function Home({ instagramPosts }) {
+  const postUrls = (instagramPosts || []).map(
     (post) => `https://instagr.am/p/${post.node.shortcode}`
   );
 
