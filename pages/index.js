@@ -87,12 +87,7 @@ export default function Home({ instagramPosts }) {
                 null,
                 `'intro album'
                 'details album'`
-              ]
-            }}
-          >
      
-                  
-               
                 <Heading
                   variant="h2"
                   mb={2}
@@ -336,7 +331,7 @@ export default function Home({ instagramPosts }) {
                   fontSize: [4, 5]
                 }}
               >
-                uhhhh
+                uhhhh 
               </Heading>
               <Heading
                 sx={{
