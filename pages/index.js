@@ -92,7 +92,7 @@ export default function Home({ instagramPosts }) {
           >
      
                   
-                </Heading>
+               
                 <Heading
                   variant="h2"
                   mb={2}
