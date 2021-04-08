@@ -90,6 +90,8 @@ export default function Home({ instagramPosts }) {
               ]
             }}
           >
+            <Grid sx={{ gridArea: "intro" }}>
+              <Box>
                 <Heading
                   variant="h2"
                   mb={2}
@@ -225,7 +227,7 @@ export default function Home({ instagramPosts }) {
               pointerEvents: "none"
             }}
           >
-            <div class="x">
+            <div className="x">
               <Image
                 className="y"
                 src="/matt.png"
@@ -333,7 +335,7 @@ export default function Home({ instagramPosts }) {
                   fontSize: [4, 5]
                 }}
               >
-                uhhhh 
+                uhhhh
               </Heading>
               <Heading
                 sx={{
@@ -389,9 +391,7 @@ export default function Home({ instagramPosts }) {
               fontSize: [4, 5]
             }}
           >
-            {
-              "touring soon near you plz hold. \nCheck back for updates."
-            }
+            {"touring soon near you plz hold. \nCheck back for updates."}
           </Heading>
         </Box>
       </Box>
@@ -456,9 +456,9 @@ export default function Home({ instagramPosts }) {
             height="315"
             src="https://www.youtube.com/embed/RkTu9vrIyfM"
             title="YouTube video player"
-            frameborder="0"
+            frameBorder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+            allowFullScreen
           ></iframe>
         </Grid>
         <Heading
@@ -468,11 +468,13 @@ export default function Home({ instagramPosts }) {
             color: "black",
             textAlign: "center",
             fontFamily: "Nanum Pen Script, Comic Sans MS",
-            fontSize: [3, 5]
+            fontSize: [3, 5],
+            maxWidth: 800,
+            mx: "auto"
           }}
         >
-          Sex Martian activities include, 
-    pb sandwiches, water sports, construction zones, and fashion.
+          Sex Martian activities include, pb sandwiches, water sports,
+          construction zones, and fashion.
         </Heading>
         <Grid variant="centered" pb={10}>
           <Heading
@@ -487,9 +489,7 @@ export default function Home({ instagramPosts }) {
               whiteSpace: "pre-wrap"
             }}
           >
-            {
-              "If you don't like it, \nCraig will karate kick me... again."
-            }
+            {"If you don't like it, \nCraig will karate kick me... again."}
           </Heading>
           <Box sx={{ maxWidth: 500 }}>
             <img
@@ -547,9 +547,6 @@ export default function Home({ instagramPosts }) {
               onFailure={() => {}}
             />
           ))}
-          {/* {tweetIds.map((tweetId) => (
-            <Tweet key={tweetId} id={tweetId} />
-          ))} */}
         </Box>
         <Heading
           sx={{
