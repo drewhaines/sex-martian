@@ -390,7 +390,7 @@ export default function Home({ instagramPosts }) {
             }}
           >
             {
-              "touring soon near plz hold. \nCheck back for updates."
+              "touring soon near you plz hold. \nCheck back for updates."
             }
           </Heading>
         </Box>
