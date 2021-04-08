@@ -86,8 +86,7 @@ export default function Home({ instagramPosts }) {
                 null,
                 null,
                 `'intro album'
-                'details album'`
-     
+                'details album'`     
                 <Heading
                   variant="h2"
                   mb={2}
