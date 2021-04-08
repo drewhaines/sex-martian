@@ -484,7 +484,7 @@ export default function Home({ instagramPosts }) {
         </Heading>
         <Grid variant="centered">
           <iframe
-            src="https://giphy.com/embed/3ohfFyZvgPqMfMyKC4"
+            src=""
             width="600px"
             height="250"
             frameBorder="0"
