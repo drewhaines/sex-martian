@@ -489,7 +489,7 @@ export default function Home({ instagramPosts }) {
               whiteSpace: "pre-wrap"
             }}
           >
-            {"If you don't like it, \nCraig will karate kick me... again."}
+            {"If you don't like it, \nCraig will karate kick Sex Martian... again."}
           </Heading>
           <Box sx={{ maxWidth: 500 }}>
             <img
