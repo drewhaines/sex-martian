@@ -97,7 +97,7 @@ export default function Home({ instagramPosts }) {
                   mb={2}
                   sx={{ textAlign: "center", color: "black" }}
                 >
-                  Wat up
+                  
                 </Heading>
                 <Heading
                   variant="h2"
@@ -342,7 +342,7 @@ export default function Home({ instagramPosts }) {
                   fontSize: [4, 5]
                 }}
               >
-                Never
+                uhhhh
               </Heading>
               <Heading
                 sx={{
@@ -480,19 +480,9 @@ export default function Home({ instagramPosts }) {
             fontSize: [3, 5]
           }}
         >
-          Sex Martian activities include, pb sandwiches, water sports, construction zones, and fashion.
+          Sex Martian activities include, 
+    pb sandwiches, water sports, construction zones, and fashion.
         </Heading>
-        <Grid variant="centered">
-          <iframe
-            src=""
-            width="600px"
-            height="250"
-            frameBorder="0"
-            class="giphy-embed"
-            allowFullScreen
-          ></iframe>
-        </Grid>
-        <Grid variant="centered" pb={10}>
           <Heading
             sx={{
               pb: [0, 5],
@@ -583,7 +573,8 @@ export default function Home({ instagramPosts }) {
             whiteSpace: "pre-wrap"
           }}
         >
-          {`Sex Martian ${new Date().getFullYear()}\n\nContact: sexmartianmusic@gmail.com\n\nAll rights are reserved by Sex Martian, the cosmos, and the earthling who made this website Do you Grok? .`}
+          {`Sex Martian ${new Date().getFullYear()}\n\nContact: sexmartianmusic@gmail.com\n\nAll rights are reserved by Sex Martian, the cosmos, and the earthling who made this website
+          Do you Grok? .`}
         </Heading>
       </Box>
     </div>
