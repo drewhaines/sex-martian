@@ -90,13 +90,7 @@ export default function Home({ instagramPosts }) {
               ]
             }}
           >
-            <Grid mt={[0, 0]} sx={{ gridArea: "intro" }}>
-              <Box>
-                <Heading
-                  variant="h2"
-                  mb={2}
-                  sx={{ textAlign: "center", color: "black" }}
-                >
+     
                   
                 </Heading>
                 <Heading
