@@ -104,13 +104,13 @@ export default function Home({ instagramPosts }) {
                   mb={2}
                   sx={{ textAlign: "center", color: "black" }}
                 >
-                  I'm Sex Martian
+                  greetings,
                 </Heading>
                 <Heading
                   variant="h2"
                   sx={{ textAlign: "center", color: "black" }}
                 >
-                  I make super siq music
+                  earthling
                 </Heading>
               </Box>
             </Grid>
@@ -399,7 +399,7 @@ export default function Home({ instagramPosts }) {
             }}
           >
             {
-              "Obviously touring is on pause due to COVID. \nCheck back for updates."
+              "touring soon near plz hold. \nCheck back for updates."
             }
           </Heading>
         </Box>
@@ -422,7 +422,7 @@ export default function Home({ instagramPosts }) {
             fontSize: ["38px", 6]
           }}
         >
-          Who the heck are you?
+          Who dis be?
         </Heading>
         <Heading
           sx={{
@@ -435,7 +435,7 @@ export default function Home({ instagramPosts }) {
             whiteSpace: "pre-wrap"
           }}
         >
-          {"My earthly name is \nMatt Burkeries."}
+          {" Are you a Sex Martian? "}
         </Heading>
         <Grid variant="centered">
           <Box sx={{ maxWidth: 500 }}>
@@ -458,8 +458,7 @@ export default function Home({ instagramPosts }) {
               maxWidth: "800px"
             }}
           >
-            My musics sounds like if Beck, the Strokes, and a martian had a
-            baby.
+            Tastes like indie-rock of some sorts
           </Heading>
           <iframe
             width="560"
@@ -481,7 +480,7 @@ export default function Home({ instagramPosts }) {
             fontSize: [3, 5]
           }}
         >
-          I like to make music and get weird.
+          Sex Martian activities include, pb sandwiches, water sports, construction zones, and fashion.
         </Heading>
         <Grid variant="centered">
           <iframe
@@ -507,7 +506,7 @@ export default function Home({ instagramPosts }) {
             }}
           >
             {
-              "If you don't like it, \nCraig will karate kick the sh*t out of you."
+              "If you don't like it, \nCraig will karate kick me... again."
             }
           </Heading>
           <Box sx={{ maxWidth: 500 }}>
@@ -584,7 +583,7 @@ export default function Home({ instagramPosts }) {
             whiteSpace: "pre-wrap"
           }}
         >
-          {`Sex Martian ${new Date().getFullYear()}\n\nContact: sexmartianmusic@gmail.com\n\nAll rights are reserved by me, myself, and the guy who made this website.`}
+          {`Sex Martian ${new Date().getFullYear()}\n\nContact: sexmartianmusic@gmail.com\n\nAll rights are reserved by Sex Martian, the cosmos, and the earthling who made this website Do you Grok? .`}
         </Heading>
       </Box>
     </div>
