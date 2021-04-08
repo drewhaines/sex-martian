@@ -474,6 +474,7 @@ export default function Home({ instagramPosts }) {
           Sex Martian activities include, 
     pb sandwiches, water sports, construction zones, and fashion.
         </Heading>
+        <Grid variant="centered" pb={10}>
           <Heading
             sx={{
               pb: [0, 5],
