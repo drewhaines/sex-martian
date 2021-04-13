@@ -6,6 +6,18 @@ import InstagramEmbed from "react-instagram-embed";
 const IG_URL =
   "https://www.instagram.com/graphql/query/?query_id=17888483320059182&variables=%7B%22id%22:%2223130744057%22,%22first%22:9,%22after%22:null%7D";
 
+const defaultInsta = [
+  { node: { shortcode: "CNamGijD2tr" } },
+  { node: { shortcode: "CMxPvS1DiWV" } },
+  { node: { shortcode: "CMkmPlgAkys" } },
+  { node: { shortcode: "CMaIcFNAoWv" } },
+  { node: { shortcode: "CMJL1vIA48v" } },
+  { node: { shortcode: "CMAhP6zgVll" } },
+  { node: { shortcode: "CL7YKyrgU8q" } },
+  { node: { shortcode: "CL4kZG7gVHZ" } },
+  { node: { shortcode: "CL1-SVfAZzr" } }
+];
+
 export const getStaticProps = async () => {
   let instagramPosts = [];
 
@@ -23,6 +35,8 @@ export const getStaticProps = async () => {
       err
     );
   }
+
+  if (instagramPosts.length === 0) instagramPosts = defaultInsta;
 
   return {
     props: {
@@ -489,7 +503,9 @@ export default function Home({ instagramPosts }) {
               whiteSpace: "pre-wrap"
             }}
           >
-            {"If you don't like it, \nCraig will karate kick Sex Martian... again."}
+            {
+              "If you don't like it, \nCraig will karate kick Sex Martian... again."
+            }
           </Heading>
           <Box sx={{ maxWidth: 500 }}>
             <img
